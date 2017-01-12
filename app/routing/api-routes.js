@@ -9,11 +9,7 @@ app.get("/api/friend", function (req, res) {
   res.json(friend);
  });
 
-app.post("/api/friend", function(request, response) {
-    var addedFriend = request.body;
-
-    friend.push(addedFriend);
-
-    response.json(addedFriend);
+app.post("/api/friend", function(req, res) {
+    res.json(friend);
 });
 }
