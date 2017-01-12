@@ -1,12 +1,18 @@
-// Routes
-// =============================================================
+var express = require("express");
+var bodyParser = require("body-parser");
+var path = require("path");
 
-// Basic route that sends the user first to the AJAX Page
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "./app/public/home.html"));
-});
 
-app.get("/survey", function(req, res) {
-  res.sendFile(path.join(__dirname, "./app/public/questions.html"));
-});
+var path = require('path');
+
+module.exports = function (app) {
+
+	app.get('/', function (req, res) {
+		res.sendFile(path.join(__dirname + '/../public/home.html'));
+	});
+
+	app.get('/questions.html', function (req, res) {
+		res.sendFile(path.join(__dirname + '/../public/questions.html'));
+	});
+};
 
